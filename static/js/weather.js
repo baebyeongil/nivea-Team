@@ -1,16 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"
-        integrity="sha384-vuFJ2JiSdUpXLKGK+tDteQZBqNlMwAjhZ3TvPaDfN9QmbPb7Q8qUpbSNapQev3YF"
-        crossorigin="c010956eae"></script>
-    <title>index.html</title>
-    <script>
         // 날씨 api - fontawesome 아이콘
         var weatherIcon = {
             '01': 'fas fa-sun',
@@ -36,7 +23,7 @@
                 var $Icon = (resp.weather[0].icon).substr(0, 2);
                 var $weather_description = resp.weather[0].main;
                 var $Temp = Math.floor(resp.main.temp - 273.15) + 'º';
-                var $humidity = '습도&nbsp;&nbsp;&nbsp;&nbsp;' + resp.main.humidity + ' %';
+                var $humidity = '습도&nbsp;&nbsp;&nbsp;&nbsp;' + resp.main.humidity + '%';
                 var $wind = '바람&nbsp;&nbsp;&nbsp;&nbsp;' + resp.wind.speed + ' m/s';
                 var $city = '서울';
                 var $cloud = '구름&nbsp;&nbsp;&nbsp;&nbsp;' + resp.clouds.all + "%";
@@ -45,7 +32,7 @@
 
 
                 $('.weather_icon').append('<i class="' + weatherIcon[$Icon] + ' fa-5x" style="height : 150px; width : 150px;"></i>');
-                $('.weather_description').prepend($weather_description);
+                $('.weatherdescription').prepend($weather_description);
                 $('.current_temp').prepend($Temp);
                 $('.humidity').prepend($humidity);
                 $('.wind').prepend($wind);
@@ -55,36 +42,3 @@
                 $('.temp_max').append($temp_max);
             }
         })
-    </script>
-    <style>
-    </style>
-</head>
-
-<body>
-    <header>
-        <h1></h1>
-        <p></p>
-    </header>
-    <div>
-        <div style="padding : 20px;color : #000; height : 150px; width: 400px; float : right;">
-            <div style="float : left;">
-                <div class="weather_icon"></div>
-            </div><br>
-
-            <div style="float : right; margin : -5px 0px 0px 60px; font-size : 11pt">
-                <div class="temp_min"></div>
-                <div class="temp_max"></div>
-                <div class="humidity"></div>
-                <div class="wind"></div>
-                <div class="cloud"></div>
-            </div>
-            <div style="float : right; margin-top : -45px;">
-                <div class="current_temp" style="font-size : 50pt; margin-right: 120px; margin-top: -80px; "></div>
-                <div class="weather_description" style="font-size : 20pt"></div>
-                <div class="city" style="font-size : 13pt"></div>
-            </div>
-        </div>
-    </div>
-</body>
-
-</html>

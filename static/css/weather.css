@@ -1,0 +1,41 @@
+.txtbg{
+    padding : 20px;
+    color : #fff;
+    height : 150px;
+    width: 400px;
+    float : right;
+    margin-top: -10px;
+    background-color: burlywood;
+    border-radius: 50px;
+    opacity:0.5;
+}
+
+.txtdatail {
+    float : right;
+    margin : -5px 0px 0px 60px;
+    font-size : 11pt
+}
+.humidity{
+    word-spacing: 8px;
+}
+.cloud{
+    word-spacing: 10px;
+}
+.txtmiddle{
+    float : right;
+    margin-top : -45px;
+}
+.current_temp{
+    font-size : 50pt;
+    margin-right: 120px;
+    margin-top: -80px;
+}
+.weatherdescription{
+    font-size : 20pt;
+    margin-right: 140px;
+    margin-top: -20px;
+}
+.city{
+    font-size : 13pt;
+    margin-right: 160px;
+}
