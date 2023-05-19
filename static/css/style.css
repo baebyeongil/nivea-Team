@@ -1,196 +1,181 @@
-* {
-    cursor: default;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@100;500&display=swap");
+
+/* reset.css */
+*,
+::before,
+::after {
+  box-sizing: border-box;
 }
-a, button {
-    color: #222;
-    cursor: pointer;
+body {
+  position: relative;
+  margin: 0;
+  padding: 2rem 0 0 6.75rem;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: var(--normal-font-size);
+  transition: 0.5s;
+  cursor: default;
+}
+:root {
+  --nav--width: 92px;
+
+  /* Colores */
+  --first-color: #0c5df4;
+  --bg-color: #12192c;
+  --sub-color: #b6cefc;
+  --white-color: #fff;
+
+  /* Fuente y tipografia */
+  --body-font: "Poppins", sans-serif;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+
+  /* z index */
+  --z-fixed: 100;
+}
+
+h1 {
+  margin: 0;
+  margin-left: 20px;
+}
+
+.slogan {
+  white-space: nowrap;
+  border-bottom: 2px solid black;
+}
+.rule {
+  white-space: nowrap;
+  margin-top: 10px;
+}
+.rule2 {
+  margin-top: 10px;
+}
+.forest {
+  margin-top: 20px;
+}
+
+.sub_rule {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.goal {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  border: 2px solid #12192c;
+}
+.goal_sub {
+  text-align: center;
+}
+.will {
+  text-align: center;
+}
+
+.name {
+  white-space: nowrap;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a,
+button {
+  color: #222;
+  cursor: pointer;
+  text-decoration: none;
 }
 a.hover {
-    font-weight: 600;
+  font-weight: 600;
 }
 
-/* header */
-#header {
-    margin-bottom: 70px;
-    text-align: center;
-    margin-left: 50px;
-}
-#header h1 {}
-#header p {
-    margin-top: -20px;
-}
-#header .nav ul li {
-    list-style: none;
-    position: fixed;
-    right: 18px;
-}
-#header .nav ul li a {
-    text-decoration: none;
-    cursor: pointer;
-    transition: 1s;
-    font-weight: 600;
-}
-#header .nav ul li a:hover {
-    text-decoration: underline;
-}
+/* ============================================ */
 
-
-
-/* 준석님 css 공간 */
-/* hover 시 반짝반짝 효과 */
-.sideBar {}
-.sideBar ul {}
-.sideBar ul li {}
-.sideBar ul li a {}
-.sideBar ul li a:hover {}
-
-/* 병일님 mainVisul 공간 */
-.mainVisual {}
-
-
-
-/* mainVisual */
-#mainVisual {}
-#mainVisual .visuBox {
-    border: 1px solid #222;
-    border-radius: 10px;
-    padding: 5px;
-    box-sizing: border-box;
-    margin-bottom: 50px;
-}
-#mainVisual .visuBox img {
-    margin: 0 auto;
-}
-#mainVisual .visuBox .visu {}
-#mainVisual .visuBox .visu li {
-    list-style: none;
-    text-align: center;
-    line-height: 2.5;
-    
-}
-#mainVisual .visuBox .visu li h4 {
-    font-weight: 600;
-    font-size: 20px;
-}
-#mainVisual .visuBox .visu li p {
-    font-weight: 300;
-    font-size: 14px;
-    margin-top: -20px;
-}
-
-/* main */
+/* main part */
 #container {
-    height: 100%;
+  height: 100%;
 }
 .main {
-    text-align: center;
-    line-height: 1.7;
+  text-align: center;
+  line-height: 1.7;
+  margin-top: 65px;
 }
 .card {
-    box-sizing: border-box;
-    border: 1px solid #111;
-    border-radius: 10px;
-    width: 300px; height: 450px;
-    cursor: pointer;
+  flex-direction: row;
+  border: 2px solid #111;
+  border-radius: 10px;
+  width: 300px;
+  height: 400px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+.card div:hover:not(.card-body) {
+  scale: 110%;
 }
 .card a {
-    cursor: pointer;
-    text-decoration: none;
-    color: #222;
+  cursor: pointer;
+  text-decoration: none;
+  color: #222;
 }
 .top {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 .bottom {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .top .c1 {
-    margin-right: 20px;
-}
-.top .c1 .card-text {
-    margin-top: -20px;
+  margin-right: 20px;
 }
 .top .c2 {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 .bottom .c4 {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 .top .card .card-img-top {
-    width: 200px;
-    height: 200px;
-    margin-top: 15px;
+  width: 200px;
+  height: 200px;
+  margin-top: 15px;
 }
 .bottom .card .card-img-top {
-    width: 200px;
-    height: 200px;
-    margin-top: 15px;
-    cursor: pointer;
+  width: 200px;
+  height: 200px;
+  margin-top: 15px;
+  cursor: pointer;
 }
-.top .card .img .card-body {}
-.top .card .card-title {}
-.bottom .card .card-body .card-text {}
-.bottom .card .card-body .btn-primary {
-    color: #333;
+.top .card .card-title {
+  margin-top: 25px;
+  margin-bottom: 40px;
+  font-size: 17px;
+}
+.top .card .card-body .card-text {
+  font-size: 16px;
+}
+.bottom .card .card-title {
+  margin-top: 25px;
+  margin-bottom: 40px;
+  font-size: 17px;
+}
+.bottom .card .card-body .card-text {
+  font-size: 16px;
 }
 
-
+/* ============================================== */
 
 /* footer */
 #footer {
-    position: fixed;
-    bottom: 0;
-    right: 20px;
+  height: 100px;
 }
-#footer p { 
-    font-weight: 600;
-    text-align: right;
-    font-size: 13px;
+#footer p {
+  font-weight: 600;
+  text-align: right;
+  font-size: 13px;
+  padding-top: 68px;
+  padding-right: 10px;
 }
-
-
-/* sidebar */
-.sideBar {
-    position: fixed;
-    right: 10px;
-    top: 400px;
-}
-.sideBar ul {
-    list-style: none;
-}
-.sideBar ul li {
-    border: 1px solid #333;
-    border-radius: 6px;
-    margin-bottom: 5px;
-    transition: 0.5s;
-    cursor: pointer;
-    padding: 5px;
-}
-.sideBar ul li:last-child {
-    margin-bottom: 0;
-}
-.sideBar ul li a {
-    text-decoration: none;
-    line-height: 1.7;
-    font-weight: 200;
-    transition: 0.5s;
-    font-size: 13px;
-}
-.sideBar ul li:hover a {
-    border-radius: 6px;
-    font-weight: 600;
-    background: #333;
-    color: #fff;
-    padding: 2px;
-}
-
 
 /* =============================================== */
-@media (max-width: 1144px) {
-    .sideBar {
-       display: none;
-    }
-}
